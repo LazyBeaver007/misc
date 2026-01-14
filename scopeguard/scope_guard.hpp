@@ -64,7 +64,7 @@ class ScopeGuard
 template<typename F>
 auto make_scope_guard(F&& f) noexcept
 {
-    return ScopeGuard<std::decay_t<F>>(std::forward(f));
+    return ScopeGuard<std::decay_t<F>>(std::forward<F>(f));
 }
 
 
